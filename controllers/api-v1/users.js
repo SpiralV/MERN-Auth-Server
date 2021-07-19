@@ -117,21 +117,6 @@ router.delete('/delete/:id', (req, res) => {
     .catch(err => { console.log(err) })
 })
 
-
-// GET current user location  - - - - - - - - - - - - - - - - -
-router.get('/events/:id', async (req, res) => {
-  try {
-      const findUser = await db.User.findById(req.params.id).populate('events')
-      res.json(findUser)
-  } catch (err) {
-      console.log(err)
-  }
-})
-
-
-// Event Creation Route
-
-
 // GET current user location  - - - - - - - - - - - - - - - - -
 router.get('/events/:id', async (req, res) => {
   try {
